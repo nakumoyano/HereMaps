@@ -1,0 +1,184 @@
+:root{
+    --dark:#1a1a1a;
+    --white:#ffffff;
+    --light-grey: #dedede;
+    --gold: #ecd5a7;
+}
+
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: .05rem;
+    background-color: var(--gold);
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    color: var(--white);
+}
+
+a:hover{
+    color: var(--white);
+    text-decoration: none;
+}
+
+
+.navbar{
+    min-height: 5rem;
+}
+
+.navbar-brand{
+    color: aqua;
+}
+
+.navbar-toggler{
+    color: var(--white);
+}
+
+.nav-link{
+    border: 0;
+    outline: none;
+    width: 100%;
+    padding: 7px 0px;
+    border-bottom: 1px solid #ccc;
+    color: var(--white);
+    text-transform: uppercase;
+    font-size: .8rem;
+}
+
+.nav-link:hover{
+    color: aqua;
+}
+section{
+    padding: 5rem ;
+}
+
+strong{
+    color: #ecd5a7;
+}
+
+.mt-6{
+    margin-top: 4rem;
+}
+
+.col-lg-4{
+    font-family: 'Nunito', sans-serif;
+}
+
+/* INNER IMG */
+
+.inner{
+    overflow: hidden;
+}
+
+.inner img{
+    transition: all 1.5s ease;
+}
+
+.inner:hover img{
+    transform: scale(1.5);
+}
+
+/* IMG DE FONDO */
+
+.index{
+    background-image: url(https://wallpaperaccess.com/full/4230746.png);
+    background-size: cover;
+}
+
+.maps{
+    background-image: url(https://i.pinimg.com/originals/80/a5/1a/80a51a0b7293317a273207178aa12358.jpg);
+    background-size: cover;
+}
+/* ---------------------------- mapa -------------------- */
+
+h3{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500 !important;
+    line-height: 1.5 !important;
+}
+
+.bg-dark{
+    background-color: var(--dark) !important;
+}
+
+.bg-white{
+    background-color: var(--white) !important;
+}
+
+.bg-light-grey{
+    background-color: var(--light-grey);
+}
+
+.bg-gold{
+    background-color: var(--gold);
+}
+
+.text-dark{
+    color: var(--dark);
+}
+
+.text-gold{
+    color: var(--gold) !important;
+}
+
+.text-light{
+    color: var(--white) !important;
+} */
+
+.navbar{
+    min-height: 5rem;
+}
+
+.navbar-toggler{
+    color: var(--white);
+}
+
+section{
+    padding: 6rem 0;
+}
+
+.mt-6{
+    margin-top: 4rem;
+}
+
+.btn{
+    padding: .5rem 1.8rem;
+    border-radius: .2rem;
+}
+
+
+.form-control{
+    
+    outline: none;
+    width: 100%;
+    padding: 7px 0px;
+    border: 1px solid #ccc;
+    font-weight: 300;
+}
+
+.form-control:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+.head{
+    background-color: #D13700;
+    border-radius: 5px;
+    margin-top: -40px;
+    -webkit-box-shadow: -1px 9px 27px -8px #D15200;
+    -moz-box-shadow: -1px 9px 27px -8px #D15200;
+    box-shadow: -1px 9px 27px -8px #D15200;
+}
+
+.btn{
+    color: red;
+    outline: none;
+    border-radius: 5px;
+    height: 40px;
+    width: 100%;
+    cursor: pointer;
+    padding: .5rem 1.8rem;
+}

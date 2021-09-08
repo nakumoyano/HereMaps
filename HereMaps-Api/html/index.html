@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Roboto+Condensed:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.11/css/mdb.min.css">
+    
+    <link rel="icon" href="https://thumbs.dreamstime.com/b/pesta%C3%B1a-de-mapas-rojos-icono-mapa-ubicaci%C3%B3n-pist%C3%B3n-localizaci%C3%B3n-vector-anclaje-ilustraci%C3%B3n-vectores-aislada-en-fondo-blanco-155893023.jpg">
+    
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- here maps -->
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-core.js"
+    type="text/javascript" charset="utf-8"></script>
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-service.js"
+    type="text/javascript" charset="utf-8"></script>
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"
+    type="text/javascript" charset="utf-8"></script>
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"
+    type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css"
+    href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" />
+
+    <title>Loca-Maps</title>
+</head>
+<body>
+
+    <!-- navbar -->
+
+    <nav class="navbar navbar-expand-lg bg-dark scrolling-navbar sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#maps">Loca-Maps.</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="icon ion-md-menu"></i>
+            </button>
+        
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item px-3">
+                        <a class="nav-link" href="#index">Alumno</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link" href="#maps">Maps</a> 
+                    </li>                   
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- alumno -->
+
+    <section class="index" id="index">
+        <div class="container text-white">
+            <h1>Bienvenidos a <strong>Loca-Maps</strong>.</h1>
+            <h5>¡La mejor página para encontrar esa ubicación tan especial y necesaria para ti!</h5><br><br>
+            <h2>Una página creada por:</h2>
+            <div class="row">
+                <div class="card-deck mt-4 text-white">
+                    <div class="card">
+                        <div class="inner">
+                            <img src="https://newcontext.com/wp-content/uploads/2021/03/api-endpoint-definition.jpg" class="card-img-top" alt="...">
+                        </div>                        
+                        <div class="card-body bg-dark">
+                            <h5 class="card-title">NOMBRE:</h5>
+                            <p class="card-text-black">Nahuel.</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="inner">
+                            <img src="https://interblog.xbiz.jp/wp-content/uploads/2021/02/iStock-ec-api.jpg" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body bg-dark">
+                            <h5 class="card-title">APELLIDO:</h5>
+                            <p class="card-text-black">Moyano.</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="inner">
+                            <img src="https://us.123rf.com/450wm/cobracz/cobracz1606/cobracz160600041/58532354-c%C3%B3digo-de-programaci%C3%B3n-en-pantalla-en-negro-texto-verde-resumen-de-desarrollo-de-software-c%C3%B3digo-fuente-.jpg?ver=6" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body bg-dark">
+                            <h5 class="card-title">LEGAJO:</h5>
+                            <p class="card-text-black">111831.</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="inner">
+                            <img src="https://image.freepik.com/vector-gratis/api-concepto-interfaz-programacion-aplicaciones-pantalla-virtual-wireframed-cyborg-mano-tocando-interfaz-digital_127544-334.jpg" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body bg-dark">
+                            <h5 class="card-title">CURSO:</h5>
+                            <p class="card-text-black">2W1.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>    
+
+    <!-- maps-->
+    
+    <section class="maps bg-light" id="maps">
+        <div class="container" >
+
+            <button type="submit" class="btn btn-primary mb-2" id="btnMapa" onclick="traerMapa()">Crear Mapa</button>
+            <button type="submit" class="btn btn-primary mb-2" id="btnApi" onclick="traerApi()">dirección de la api</button>
+
+            <label class="sr-only" for="inlineFormInputGroupUsername2">Username</label>
+            <div class="input-group mb-2 mr-sm-2">
+                <div class="input-group-prepend">
+                    <div class="input-group-text" id="latitud">Latitud</div>
+                </div>
+                <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Ej: -32.65" name="latitud" required>
+            </div> 
+            <label class="sr-only" for="inlineFormInputGroupUsername2">Username</label>
+            <div class="input-group mb-2 mr-sm-2">
+                <div class="input-group-prepend">
+                    <div class="input-group-text" id="longitud">Longitud</div>
+                </div>
+                <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Ej: 64.74" name="longitud" required>
+            </div> 
+            <button type="submit" class="btn btn-primary mb-2" id="btn" onclick="buscarCoord()">Buscar Coordenadas</button>
+            <button type="submit" class="btn btn-primary mb-2" id="btn" onclick="borrarMarcadores()">Borrar Marcador</button>
+             
+            <div class="card bg-dark">
+                <div class="row justify-content-center"> 
+                    <div style="width: 93%; height: 480px" id="mapContainer" class="my-4"></div>
+                </div>                 
+            </div>
+        </div>
+    </section>
+    
+    
+    <!-- footer -->
+
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item mx-2"><i class="icon ion-logo-instagram"></i></li>
+                        <li class="list-inline-item mx-2"><i class="icon ion-logo-twitter"></a></i></li>
+                        <li class="list-inline-item mx-2"><i class="icon ion-logo-youtube"></i></li>
+                        <li class="list-inline-item mx-2"><i class="icon ion-logo-linkedin"></i></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 text-sm-right">
+                    <small>Creado por <a href="#index">Moyano Nahuel</a> | <span class="far fa-copyright"></span>2021 Todos los derechos reservados.</small>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.5.3/js/bootstrapValidator.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>               
